@@ -10,11 +10,16 @@ import json
 
 
 class GroupsViewSet(viewsets.ModelViewSet):
+    model = Groups
     queryset = Groups.objects.all().order_by('id')
     serializer_class = GroupsSerializer
 
+    def post(self, request, *args, **kwargs):
+         pass
+
+
 class HintsViewSet(viewsets.ModelViewSet):
-    queryset = Hints.objects.all().order_by('id')
+    queryset = Hints.objects.all()
     serializer_class = HintsSerializer
 
 class HintViewSet(viewsets.ModelViewSet):

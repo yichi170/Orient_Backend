@@ -1,28 +1,26 @@
 <template>
   <b-container>
     <h2>{{ $route.query.group }}</h2>
-    
-      <b-card-group deck>
-        <HintCard
-          v-for="hint in undone_hints"
-          :key="hint.id"
-          :id="hint.id"
-          :name="hint.name"
-          :status="hint.done"
-        >
-        </HintCard>
-      </b-card-group>
-      <b-card-group deck>
-        <HintCard
-          v-for="hint in done_hints"
-          :key="hint.id"
-          :id="hint.id"
-          :name="hint.name"
-          :status="hint.done"
-        >
-        </HintCard>
-      </b-card-group>
-    
+    <b-card-group deck>
+      <HintCard
+        v-for="hint in undone_hints"
+        :key="hint.id"
+        :id="hint.id"
+        :name="hint.name"
+        :status="hint.done"
+      >
+      </HintCard>
+    </b-card-group>
+    <b-card-group deck>
+      <HintCard
+        v-for="hint in done_hints"
+        :key="hint.id"
+        :id="hint.id"
+        :name="hint.name"
+        :status="hint.done"
+      >
+      </HintCard>
+    </b-card-group>
   </b-container>
 </template>
 

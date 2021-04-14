@@ -24,9 +24,14 @@ class Hint(models.Model):
 
 class Hints(models.Model):
     id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length = 100)
-    done = models.CharField(max_length = 10)
+    name = models.CharField(max_length = 100, default ='')
+    done = models.CharField(max_length = 10, default ='')
+    whichgroup = models.ForeignKey(Groups, related_name='hints', on_delete=models.CASCADE)
+    # class Meta:
+    #     unique_together = ['groups', 'id']
+    #     ordering = ['id']
 
-
+    # def __str__(self):
+    #     return '%d: %s' % (self.groups, self.name)
 
 
