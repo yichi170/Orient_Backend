@@ -1,4 +1,5 @@
-# orient_frontend
+# fcs_orient_2021
+a vue website for orienteering for fcs event
 
 ## Project setup
 ```
